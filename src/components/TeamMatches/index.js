@@ -8,6 +8,8 @@ import LatestMatch from '../LatestMatch'
 
 import MatchCard from '../MatchCard'
 
+import PieChart from '../PieChart'
+
 import './index.css'
 
 class TeamMatches extends Component {
@@ -15,6 +17,12 @@ class TeamMatches extends Component {
 
   componentDidMount() {
     this.getTeam()
+  }
+
+  change = () => {
+    const {history} = this.props
+
+    history.replace('/')
   }
 
   getTeam = async () => {
@@ -75,6 +83,22 @@ class TeamMatches extends Component {
     this.setState({teamDetails: newUpdated, isLoading: false})
   }
 
+  getNoOfMatches = value => {
+    const {teamMatchesData} = this.state
+    const {latestMatch, recentMatches} = teamMatchesData
+    const currentMatch = value === latestMatch.matchStatus ? 1 : 0
+    const result =
+      recentMatches.filter(match => match.matchStatus === value).length +
+      currentMatch
+    return result
+  }
+
+  generatePieChartData = () => [
+    {name: 'Won', value: this.getNoOfMatches('Won')},
+    {name: 'Lost', value: this.getNoOfMatches('Lost')},
+    {name: 'Drawn', value: this.getNoOfMatches('Drawn')},
+  ]
+
   render() {
     const {teamDetails, isLoading} = this.state
 
@@ -92,6 +116,12 @@ class TeamMatches extends Component {
           </div>
         ) : (
           <div className={`bg-container2 ${id}`}>
+            <div className="backbutton">
+              <button className="backbtn" onClick={this.change}>
+                Back
+              </button>
+            </div>
+
             <img
               src={teamDetails.teamBannerUrl}
               className="banner-img"
