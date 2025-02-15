@@ -1,0 +1,32 @@
+/* Write your CSS here */
+
+.latest-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  font-family: 'Bree Serif';
+  color: white;
+  padding: 10px;
+}
+
+.logo-img {
+  width: 200px;
+  
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 33%;
+}
+
+.right-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 33%;
+}

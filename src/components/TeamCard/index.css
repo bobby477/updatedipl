@@ -1,0 +1,27 @@
+/* Write your CSS here */
+
+.link-container {
+  width: 45%;
+  border-radius: 10px;
+  background-color: #475569;
+  display: flex;
+  align-items: center;
+  font-family: 'Bree Serif';
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+.team-img {
+  width: 100px;
+  height: 150px;
+  margin-right: 10px;
+}
+
+.liorder {
+  display: flex;
+  align-items: center;
+}
+.para {
+  font-size: 25px;
+}

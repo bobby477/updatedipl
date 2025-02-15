@@ -1,0 +1,29 @@
+/* Write your CSS here */
+
+.team-list {
+  border-radius: 8px;
+  background-color: #0f172a;
+  font-family: 'Bree Serif';
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 300px;
+  margin: 10px;
+  text-align: center;
+}
+
+.teamlogo {
+  width: 50px;
+}
+
+.red {
+  color: #d91c1f;
+}
+
+.green {
+  color: #18ed66;
+}
