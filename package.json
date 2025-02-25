@@ -5,7 +5,7 @@
   "engines": {
     "node": "^10.13 || 12 || 14 || 15",
     "npm": ">=6",
-    "node": "22.x" 
+    "node": "18.x" 
   },
   "dependencies": {
     "@testing-library/jest-dom": "5.11.9",
