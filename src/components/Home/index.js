@@ -9,6 +9,7 @@ import TeamCard from '../TeamCard'
 import './index.css'
 
 class Home extends Component {
+  
   state = {teamsList: [], isLoading: true}
 
   componentDidMount() {
@@ -31,7 +32,9 @@ class Home extends Component {
     this.setState({teamsList: updated, isLoading: false})
   }
   render() {
+    
     const {teamsList, isLoading} = this.state
+    
     return (
       <div className="bg-container">
         <div className="title">
